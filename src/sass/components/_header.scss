@@ -1,0 +1,384 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    background-color: $bkg-aux;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 502px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 280px;
+    height: 37px;
+    margin-top: 12px;
+}
+
+.header-title {
+    margin-top: 50px;
+    margin-bottom: 32px;
+
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32.68px;
+    color: $color-white;
+}
+
+.title-accent {
+    font-size: 34px;
+    line-height: 32.81px;
+}
+
+.button-products {
+    width: 108px;
+    height: 38px;
+    margin-right: 12px;
+
+    border: solid 2px $color-accent;
+    border-radius: 8px;
+    color: $black;
+    background-color: $bkg-aux;
+
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.63px;
+
+    &:hover {
+        border-color: $hover;
+    }
+}
+
+.button-made {
+    color: $color-accent;
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.63px;
+
+    &:hover {
+        color: $hover;
+    }
+}
+
+.yellow-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.big-icecream {
+    position: absolute;
+    bottom: 0;
+    left: 85;
+}
+
+.nav-list,
+.menu-button,
+.button-arrow,
+.header-statistic,
+.many-icecreams, 
+.text-header,
+.arrow {
+    display: none;
+}
+
+
+// Для экранов от 320 до 480 пикселей
+@media screen and (min-width: $mobile320) {
+    .container {
+        width: 320px;
+    }
+
+}
+
+// Для экранов от 481 до 768 пикселей
+@media screen and (min-width: $mobile480) {
+    .container {
+        width: 480px;
+        height: 415px;
+    }
+
+    .yellow-dots {
+        left: 150px;
+    }
+
+    .big-icecream {
+        left: 230px;
+    }
+
+    .nav-menu {
+        width: 440px;
+        height: 44px;
+        margin-top: 14px;
+    }
+
+    .header-title {
+        width: 247px;
+        margin-top: 40px;
+    }
+}
+
+
+// Для экранов от 769 до 1200 пикселей
+@media screen and (min-width: $tablet) {
+    .container {
+        position: relative;
+        width: 768px;
+        height: 415px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .nav-menu {
+        width: 704px;
+        height: 46px;
+        margin-top: 20px;
+    }
+
+    .menu-button {
+        display: inline-block;
+        width: 152px;
+        height: 42px;
+        margin-left: 32px;
+        padding-left: 36px;
+
+
+        border: none;
+        border-radius: 10px;
+        color: $black;
+        background-color: $color-accent;
+
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17.07px;
+        text-align: left;
+
+        &:hover {
+            background-color: $hover;
+        }
+
+        &:focus
+        .button-arrow {
+            color: $arrow;
+        }
+
+        & .button-arrow {
+            fill: $arrow;
+        }
+    }
+
+    .tablet-menu {
+        display: flex;
+        position: relative;
+    }
+
+    .button-arrow {
+        display: flex;
+        position: absolute;
+        right: 35px;
+        top: 15px;
+    }
+
+    .header-title {
+        width: 247px;
+        margin-top: 14px;
+        margin-bottom: 24px;
+    }
+
+    .yellow-dots {
+        left: 0;
+    }
+
+    .big-icecream {
+        left: 408px;
+    }
+
+    .many-icecreams {
+        display: block;
+        position: absolute;
+        bottom: 12px;
+        left: 32px;
+        z-index: 1;
+    }
+
+    .text-header {
+        display: block;
+        position: absolute;
+        width: 176px;
+        height: 68px;
+        left: 216px;
+        bottom: 69px; 
+        margin: 0;
+
+        font-family: $font-aux1;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16.8px;
+        color: $color-text-header;
+    }
+
+    .arrow {
+        display: block;
+        position: absolute;
+        left: 216px;
+        bottom: 24px;
+    }
+
+    .header-statistic {
+        display: block;
+        position: absolute;
+        right: 32px;
+        top: 94px;
+        width: 46px;
+    }
+
+    .stat-number {
+        font-family: $font-main;
+        font-weight: 900;
+        font-size: 28px;
+        color: $color;
+        line-height: 34.13px;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+
+    .stat-type {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 8px;
+        color: $color-white;
+        line-height: 9.75px;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+// Для экранов от 1200 и более пикселей
+@media screen and (min-width: $desktop) {
+    .container {
+        position: relative;
+        width: 1200px;
+        height: 664px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-menu {
+        width: 1168px;
+        height: 65px;
+        margin-top: 8px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        width: 444px;
+        list-style-type: none;
+
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19.5px; 
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: $color-white;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    .big-icecream {
+        left: 652px;
+    }
+
+    .many-icecreams {
+        left: 16px;
+        bottom: 64px;
+    }
+
+    .text-header {
+        width: 202px;
+        height: 80px;
+        left: 257px;
+        bottom: 143px;
+        margin: 0;
+        
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+
+    .arrow {  
+        left: 257px;
+        bottom: 103px;
+    }
+
+    .header-title {
+        width: 367px;
+        margin-top: 45px;
+        margin-bottom: 28px;
+    
+        font-size: 38px;
+        line-height: 47.76px;
+    }
+
+    .button-products {
+        width: 134px;
+        height: 42px;
+        margin-right: 12px;
+    
+        border-radius: 10px;
+
+        font-size: 14px;
+        line-height: 18px;
+    
+        &:hover {
+            border-color: $hover;
+        }
+    }
+
+    .button-made {
+        font-size: 14px;
+        line-height: 17,07px;
+    }
+
+    .header-statistic {
+        right: 16px;
+        top: 126px;
+        width: 85px;
+    }
+    
+    .stat-number {
+            font-size: 46px;
+            line-height: 56,07px;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 14px;
+    }
+    
+    .stat-type {
+            font-size: 14px;
+            line-height: 17,07px;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 16px;
+    }
+}

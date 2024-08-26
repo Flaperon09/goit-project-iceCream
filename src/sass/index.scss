@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+@import './utils/breakpoints';
+@import './utils/common';
+@import './utils/placeholders';
+@import './utils/variables';
+@import './utils/global-styles';
+
+@import './components/header';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/reviews';
+@import './components/contacts';
+@import './components/footer';

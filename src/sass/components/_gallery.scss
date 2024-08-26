@@ -1,0 +1,11 @@
+// Для экранов до 320 пикселей
+@media screen and (min-width: $mobile320) {}
+
+// Для экранов от 321 до 480 пикселей
+@media screen and (min-width: $mobile480) {}
+
+// Для экранов от 481 до 768 пикселей
+@media screen and (min-width: $tablet) {}
+
+// Для экранов от 769 до 1200 пикселей
+@media screen and (min-width: $desktop) {}
