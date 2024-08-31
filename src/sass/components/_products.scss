@@ -1,11 +1,398 @@
-// Для экранов до 320 пикселей
-@media screen and (min-width: $mobile320) {}
+.main {
+    display: flex;
+    justify-content: center;
+}
 
-// Для экранов от 321 до 480 пикселей
-@media screen and (min-width: $mobile480) {}
+.products {
+    position: relative;
+    width: 320px;
+    height: 1937px;
 
-// Для экранов от 481 до 768 пикселей
-@media screen and (min-width: $tablet) {}
+    padding-left: 20px;
+    padding-right: 20px;
 
-// Для экранов от 769 до 1200 пикселей
-@media screen and (min-width: $desktop) {}
+    background-color: $bkg-color;
+    background-image: url('../images/products/backgroud-mobile.jpg');
+    background-size: cover;
+}
+
+// Стили карточки товара - начало
+.grid-container {
+    padding: 0;
+}
+
+.grid-element {
+    width: 280px;
+    height: 420px;
+    margin-top: 148px;
+    border-radius: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0;
+}
+
+.grid-element::before {
+    content: "";
+    display: inline-block;
+    width: 242px;
+    height: 240px;
+    
+    margin-left: 19px;
+    margin-top: -120px;
+}
+
+.icecream {
+    background-color: $color-cart-icecream;
+}
+
+.icecream::before {
+    background-image: url(../images/products/ice-cream-mobil320.png);
+}
+
+.icecoffee {
+    margin-top: 168px;
+    background-color: $color-cart-icecoffee;
+}
+
+.icecoffee::before {
+    background-image: url(../images/products/ice-coffee.png);
+}
+
+.milkshakes {
+    margin-top: 168px;
+    background-color: $color-cart-milkshakes;
+}
+
+.milkshakes::before {
+    background-image: url(../images/products/milkshakes.png);
+}
+
+.cart-title {
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.38px;
+    color: $color;
+    text-align: center;
+}
+
+.card-text {
+    width: 190px;
+    top: 187px;
+    left: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24.26px;
+    color: $color;
+    text-align: center;
+}
+
+.icecream .cart-arrow {
+    margin-top: 101px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icecoffee .cart-arrow,
+.milkshakes .cart-arrow {
+    margin-top: 53px;
+    margin-left: auto;
+    margin-right: auto;
+}
+// Стили карточки товара - конец
+
+// Медиазапрос для бекграунда на экране до 320 пикселей
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .products {
+        background-image: url('../images/products/backgroud-mobile@2x.jpg');
+    }
+
+    .icecream::before {
+        background-size: 242px;
+        background-image: url(../images/products/ice-cream-mobil320@2x.png);
+    }
+
+    .icecoffee::before {
+        background-size: 242px;
+        background-image: url(../images/products/ice-coffee@2x.png);
+    }
+
+    .milkshakes::before {
+        background-size: 242px;
+        background-image: url(../images/products/milkshakes@2x.png);
+    }
+}
+
+// === Для экранов от 320 до 479 пикселей
+@media screen and (min-width: $mobile320) {
+    .products {
+        width: 320px;
+        height: 1937px;
+
+        background-image: url('../images/products/backgroud-mobile.jpg');
+        background-size: cover;
+    }
+
+    // Медиазапрос для бекграунда на экране до 479 пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products {
+            background-image: url('../images/products/backgroud-mobile@2x.jpg');
+        }
+    }
+}
+
+.prod-label {
+    margin-top: 60px;
+
+    font-family: $font-main;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21.94px;
+    text-align: center;
+    color: $color;
+}
+
+.prod-header {
+    margin-top: 12px;
+    
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37.71px;
+    text-align: center;
+    color: $color;
+}
+
+// === Для экранов от 480 до 767 пикселей
+@media screen and (min-width: $mobile480) {
+    .products {
+        width: 480px;
+        height: 1957px;
+    
+        background-image: url('../images/products/backgroud-mobile.jpg');
+        background-size: cover;
+    }
+    
+    // Медиазапрос для бекграунда на экране от 480 до 767 пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products {
+            background-image: url('../images/products/backgroud-mobile@2x.jpg');
+        }
+    }
+
+    // Стили карточки товара - начало
+    .grid-element {
+        width: 320px;
+        height: 428px;
+    }
+
+    .grid-element::before {
+        margin-left: 39px;
+    }
+
+    .cart-arrow {
+        margin-top: 106px;;
+    }
+    
+    // Стили карточки товара - конец
+}
+
+// === Для экранов от 768 до 1199 пикселей
+@media screen and (min-width: $tablet) {
+    .products {
+        width: 768px;
+        height: 830px;
+        padding: 0 32px 0 32px;
+    
+        // background-repeat: repeat;
+        background-image: url('../images/products/backgroud-tablet.jpg');
+        background-size: cover;
+        
+    }
+    
+    // Медиазапрос для бекграунда на экране от 768 до 1199 пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products {
+            background-image: url('../images/products/backgroud-tablet@2x.jpg');
+        }
+    }
+
+    .prod-label {
+        font-size: 22px;
+        line-height: 26.82px;
+    }
+        
+    .prod-header {
+        font-size: 34px;
+        line-height: 42.73px;
+    }
+
+    // Стили grid
+    .grid-container {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 224px 224px 224px;
+    }
+
+    .grid-element {
+        width: 224px;
+        height: 428px;
+        margin-top: 200px;
+    }
+
+    .grid-element::before {
+        margin-left: -9px;
+    }
+
+    .cart-title {
+        margin-top: -12px;
+        margin-bottom: 0;
+    
+        font-size: 22px;
+        line-height: 26.82px;
+    }
+    
+    .card-text {
+        width: 172px;
+    }
+    
+    .icecream .cart-arrow {
+        margin-top: 101px;
+    }
+
+    .milkshakes .cart-arrow {
+        margin-top:75px;
+    }
+}
+
+// === Для экранов от 1200 и более пикселей
+@media screen and (min-width: $desktop) {
+    .products {
+        width: 1200px;
+        height: 1053px;
+        padding: 0 16px 0 16px;
+    
+        background-image: url('../images/products/backgroud-desktop.jpg');
+        background-size: cover;
+    }
+
+    .prod-label {
+        margin-top: 60px;
+
+        font-size: 30px;
+        line-height: 36.57px;
+    }
+    
+    .prod-header {
+        font-size: 36px;
+        line-height: 45.25px;
+        letter-spacing: 6%;
+    }
+
+    // Стили grid
+    .grid-container {
+        display: grid;
+        gap: 29px;
+        grid-template-columns: 370px 370px 370px;
+    }
+    
+    .grid-element {
+        width: 370px;
+        height: 536px;
+        margin-top: 303px;
+    }
+    
+    .grid-element::before {
+        margin-left: -9px;
+    }
+
+    .grid-element::before {
+        content: "";
+        display: inline-block;
+        width: 362px;
+        height: 362px;
+        
+        margin-left: 4px;
+        margin-top: -185px;
+    }
+        
+    .icecream::before {
+        background-size: 362px;
+        background-image: url(../images/products/ice-cream-desktop.png);
+    }
+        
+    .icecoffee::before {
+        background-size: 362px;
+        background-image: url(../images/products/ice-coffee-desktop.png);
+    }
+        
+    .milkshakes::before {
+        background-size: 362px;
+        background-image: url(../images/products/milkshakes.png);
+    }
+    
+    .cart-title {
+        margin-top: -12px;
+        margin-bottom: 0;
+    
+        font-size: 30;
+        line-height: 36.57px;
+    }
+    
+    .card-text {
+        margin-top: 66px;
+        width: 246px;
+
+        font-size: 16px;
+        line-height: 28.16px;
+    }
+    
+    .icecream .cart-arrow {
+        margin-top: 78px;
+    }
+
+    .icecoffee .cart-arrow,
+    .milkshakes .cart-arrow {
+        margin-top: 50px;
+    }
+
+    // Медиазапрос для бекграунда на экране от 1200 и более
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products {
+            background-image: url('../images/products/backgroud-desktop@2x.jpg');
+        }
+    
+        .icecream::before {
+            background-size: 362px;
+            background-image: url(../images/products/ice-cream-desktop@2x.png);
+        }
+
+        .icecoffee::before {
+            background-size: 362px;
+            background-image: url(../images/products/ice-coffee-desktop@2x.png);
+        }
+
+        .milkshakes::before {
+            background-size: 362px;
+            background-image: url(../images/products/milkshakes-desktop@2x.png);
+        }
+    }
+}

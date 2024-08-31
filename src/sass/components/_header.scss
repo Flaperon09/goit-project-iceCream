@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -37,35 +37,52 @@
     line-height: 32.81px;
 }
 
-.button-products {
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 108px;
     height: 38px;
     margin-right: 12px;
 
     border: solid 2px $color-accent;
     border-radius: 8px;
-    color: $black;
     background-color: $bkg-aux;
 
-    font-family: $font-main;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 14.63px;
-
     &:hover {
-        border-color: $hover;
+        border: solid 2px $hover;
     }
 }
 
-.button-made {
-    color: $color-accent;
+.button-item {
+    text-decoration: none;
+    color: $buttons-link;
     font-family: $font-main;
     font-weight: 600;
     font-size: 12px;
     line-height: 14.63px;
+}
 
+.button-link {
+    color: $buttons-link;
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.63px;
+    color: $color-accent;
+        
     &:hover {
         color: $hover;
+    }
+
+    &:focus {
+        color: $color-white;
     }
 }
 
@@ -92,15 +109,14 @@
 }
 
 
-// Для экранов от 320 до 480 пикселей
+// Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {
     .container {
         width: 320px;
     }
-
 }
 
-// Для экранов от 481 до 768 пикселей
+// Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
     .container {
         width: 480px;
@@ -128,10 +144,9 @@
 }
 
 
-// Для экранов от 769 до 1200 пикселей
+// Для экранов от 768 до 1199 пикселей
 @media screen and (min-width: $tablet) {
     .container {
-        position: relative;
         width: 768px;
         height: 415px;
         padding-left: 32px;
@@ -151,10 +166,9 @@
         margin-left: 32px;
         padding-left: 36px;
 
-
         border: none;
         border-radius: 10px;
-        color: $black;
+        color: $buttons-link;
         background-color: $color-accent;
 
         font-family: $font-main;
@@ -340,7 +354,7 @@
         line-height: 47.76px;
     }
 
-    .button-products {
+    .buttons-element {
         width: 134px;
         height: 42px;
         margin-right: 12px;
@@ -349,15 +363,12 @@
 
         font-size: 14px;
         line-height: 18px;
-    
-        &:hover {
-            border-color: $hover;
-        }
     }
 
-    .button-made {
+    .button-item,
+    .button-link {
         font-size: 14px;
-        line-height: 17,07px;
+        line-height: 18px;
     }
 
     .header-statistic {
