@@ -1,11 +1,194 @@
+.advantages-wrapper {
+    width: 320px;
+    height: 644px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $bkg-aux;
+}
+
+.advantages-header {
+    position: fixed;
+    transform: scale(0);
+}
+
+// Grid-контейнер
+.adv-grid-container {
+    padding-top: 47px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adv-grid-element {
+    width: 230px;
+    height: 194px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0;
+}
+
+.adv-grid-element::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    margin-left: 90px;
+    margin-top: -25px;
+}
+
+.cow::before {
+    background-image: url(../images/advantages/icon-cow.png);
+}
+
+.weight::before {
+    background-image: url(../images/advantages/icon-weight.png);
+}
+
+.torch::before {
+    background-image: url(../images/advantages/icon-torch.png);
+}
+
+.adv-number {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.88px;
+    color: $color-white;
+    text-align: center;
+}
+
+.adv-info {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20.4px;
+    color: $color-white;
+    text-align: center;
+}
+
+// Медиазапрос для иконок
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+
+    .cow::before {
+        background-size: 50px;
+        background-image: url(../images/advantages/icon-cow@2x.png);
+    }
+
+    .weight::before {
+        background-size: 50px;
+        background-image: url(../images/advantages/icon-weight@2x.png);
+    }
+
+    .torch::before {
+        background-size: 50px;
+        background-image: url(../images/advantages/icon-torch@2x.png);
+    }
+}
+
+
 // Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
-@media screen and (min-width: $mobile480) {}
+@media screen and (min-width: $mobile480) {
+    .advantages-wrapper {
+        width: 480px;
+    }
+}
 
 // Для экранов от 768 до 1199 пикселей
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .advantages-wrapper {
+        width: 768px;
+        height: 475px;
+    }
+
+    // Стили Grid-сетки
+    .adv-grid-container {
+        padding-top: 55px;
+        padding-left: 76px;
+        padding-right: 76px;
+
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 152px 152px 152px;
+    }
+    
+    .adv-grid-element {
+        width: 152px;
+        height: 241px;
+        margin-top: 0px;
+    }
+
+    .adv-grid-element::before {
+        margin-left: 51px;
+    }
+
+    .adv-number {
+        margin-top: 32px;
+        font-size: 48px;
+        line-height: 58.51px;
+    }
+    
+    .adv-info {
+        width: 152px;
+        margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 14px;
+        line-height: 24.36px;
+    }
+}
 
 // Для экранов от 1200 и более пикселей
-@media screen and (min-width: $desktop) {}
+@media screen and (min-width: $desktop) {
+    .advantages-wrapper {
+            width: 1200px;
+            height: 428px;
+        }
+    
+    // Стили Grid-сетки
+    .adv-grid-container {
+        padding-top: 50px;
+        padding-left: 16px;
+        padding-right: 16px;
+    
+        display: grid;
+        gap: 29px;
+    grid-template-columns: 370px 370px 370px;
+    }
+    
+    .adv-grid-element {
+        width: 370px;
+        height: 225px;
+        margin-top: 0px;
+    }
+    
+    .adv-grid-element::before {
+        margin-left: 160px;
+    }
+    
+    .adv-number {
+        margin-top: 40px;
+        font-size: 58px;
+        line-height: 70.7px;
+    }
+    
+    .adv-info {
+        width: 368px;
+        margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-size: 16px;
+        line-height: 28.16px;
+    }
+}

@@ -1,9 +1,11 @@
-.main {
+.products
+ {
     display: flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.products {
+.products-wrapper {
     position: relative;
     width: 320px;
     height: 1937px;
@@ -113,7 +115,7 @@
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
-    .products {
+    .products-wrapper {
         background-image: url('../images/products/backgroud-mobile@2x.jpg');
     }
 
@@ -135,9 +137,11 @@
 
 // === Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {
-    .products {
+    .products-wrapper {
         width: 320px;
         height: 1937px;
+        margin-left: auto;
+        margin-right: auto;
 
         background-image: url('../images/products/backgroud-mobile.jpg');
         background-size: cover;
@@ -147,7 +151,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .products {
+        .products-wrapper {
             background-image: url('../images/products/backgroud-mobile@2x.jpg');
         }
     }
@@ -177,7 +181,7 @@
 
 // === Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
-    .products {
+    .products-wrapper {
         width: 480px;
         height: 1957px;
     
@@ -189,7 +193,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .products {
+        .products-wrapper {
             background-image: url('../images/products/backgroud-mobile@2x.jpg');
         }
     }
@@ -207,13 +211,12 @@
     .cart-arrow {
         margin-top: 106px;;
     }
-    
     // Стили карточки товара - конец
 }
 
 // === Для экранов от 768 до 1199 пикселей
 @media screen and (min-width: $tablet) {
-    .products {
+    .products-wrapper {
         width: 768px;
         height: 830px;
         padding: 0 32px 0 32px;
@@ -228,7 +231,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .products {
+        .products-wrapper {
             background-image: url('../images/products/backgroud-tablet@2x.jpg');
         }
     }
@@ -243,7 +246,7 @@
         line-height: 42.73px;
     }
 
-    // Стили grid
+    // Стили Grid-сетки
     .grid-container {
         display: grid;
         gap: 16px;
@@ -283,9 +286,10 @@
 
 // === Для экранов от 1200 и более пикселей
 @media screen and (min-width: $desktop) {
-    .products {
+    .products-wrapper {
         width: 1200px;
         height: 1053px;
+
         padding: 0 16px 0 16px;
     
         background-image: url('../images/products/backgroud-desktop.jpg');
@@ -376,7 +380,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .products {
+        .products-wrapper {
             background-image: url('../images/products/backgroud-desktop@2x.jpg');
         }
     

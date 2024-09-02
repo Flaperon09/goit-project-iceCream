@@ -1,1 +1,39 @@
-<section></section>
+<section>
+  <div class="gallery-wrapper">
+    <picture>
+      <source
+        srcset="
+          ./images/gallery/icecream-set-mobile320.png    1x,
+          ./images/gallery/icecream-set-mobile320@2x.png 2x
+        "
+        media="(max-width: 479px)"
+      />
+      <source
+        srcset="
+          ./images/gallery/icecream-set-mobile480.png    1x,
+          ./images/gallery/icecream-set-mobile480@2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="
+          ./images/gallery/icecream-set-tablet.png    1x,
+          ./images/gallery/icecream-set-tablet@2x.png 2x
+        "
+        media="(max-width: 1199px)"
+      />
+      <source
+        srcset="
+          ./images/gallery/icecream-set-desktop.png    1x,
+          ./images/gallery/icecream-set-desktop@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <img
+        class="icecream-set"
+        src="./images/gallery/icecream-set-mobile320.png"
+        alt="Фото мороженок"
+      />
+    </picture>
+  </div>
+</section>

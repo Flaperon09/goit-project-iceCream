@@ -1,11 +1,117 @@
+.gallery-wrapper {
+    position: relative;
+
+    width: 320px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $bkg-color;
+    background-size: 885px;
+    background-position-x: 100px;
+    background-position-y: -938px;
+    background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
+    // background-size: cover;
+}
+
+.icecream-set {
+    position: absolute;
+    width: 280px;
+    top: -36px;
+    left: 20px;
+}
+
+// Медиазапрос для бекграунда на экране до 320 пикселей
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .products-wrapper {
+        background-image: url('../images/gallery/gallery-bcg-mobile@2x.jpg');
+    }
+}
+
 // Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
-@media screen and (min-width: $mobile480) {}
+@media screen and (min-width: $mobile480) {
+    .gallery-wrapper {
+        width: 480px;
+        height: 204px;
+
+        background-size: 885px;
+        background-position-x: -285px;
+        background-position-y: -140px;
+        background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
+    }
+
+    .icecream-set {
+        width: 440px;
+        top: -49px;
+        left: 20px;
+    }
+
+    // Медиазапрос для бекграунда на экране от 480 до 767 пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products-wrapper {
+            background-image: url('../images/gallery/gallery-bcg-mobile@2x.jpg');
+        }
+    }
+}
 
 // Для экранов от 768 до 1199 пикселей
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .gallery-wrapper {
+            width: 768px;
+            height: 283px;
+
+            background-size: 940px;
+            background-position-x: -10px;
+            background-position-y: 0px;
+            background-image: url('../images/gallery/gallery-bcg-tablet.jpg');
+    }
+    
+    .icecream-set {
+        width: 704px;
+        top: -144px;
+        left: 32px;
+    }
+    
+    // Медиазапрос для бекграунда на экране от 768 до 1199 пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products-wrapper {
+            background-image: url('../images/gallery/gallery-bcg-tablet@2x.jpg');
+        }
+    }
+}
 
 // Для экранов от 1200 и более пикселей
-@media screen and (min-width: $desktop) {}
+@media screen and (min-width: $desktop) {
+    .gallery-wrapper {
+        width: 1200px;
+        height: 422px;
+
+        background-position-x: -48px;
+        background-position-y: -200px;
+        background-image: url('../images/gallery/gallery-bcg-desktop.jpg');
+    }
+    
+    .icecream-set {
+        width: 1013px;
+        top: -98px;
+        left: 93px;
+    }
+    
+    // Медиазапрос для бекграунда на экране от 1200 и более пикселей
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .products-wrapper {
+            background-image: url('../images/gallery/gallery-bcg-desktop@2x.jpg');
+        }
+    }
+}

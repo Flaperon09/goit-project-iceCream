@@ -60,16 +60,35 @@
     }
 }
 
-.button-item {
-    text-decoration: none;
+.button-products {
+    display: inline-flex;
+             
+    width: 108px;
+    height: 38px;
+    margin-right: 12px;
+    border: solid 2px $color-accent;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    
     color: $buttons-link;
     font-family: $font-main;
     font-weight: 600;
     font-size: 12px;
     line-height: 14.63px;
+    color: $buttons-link;
+    text-decoration: none;
+    
+        &:hover { 
+            border: solid 2px $hover;
+        }
+    
+        &:focus {
+            color: $color-white;
+        }
 }
 
-.button-link {
+.button-made {
     color: $buttons-link;
     font-family: $font-main;
     font-weight: 600;
@@ -354,19 +373,22 @@
         line-height: 47.76px;
     }
 
-    .buttons-element {
+    .button-products {
         width: 134px;
         height: 42px;
-        margin-right: 12px;
-    
+
         border-radius: 10px;
 
         font-size: 14px;
         line-height: 18px;
+    
+        &:hover {
+            border: solid 2px $hover;
+        }
+    
     }
 
-    .button-item,
-    .button-link {
+       .button-made {
         font-size: 14px;
         line-height: 18px;
     }

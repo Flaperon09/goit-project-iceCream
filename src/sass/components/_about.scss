@@ -1,11 +1,221 @@
+
+.about-wrapper {
+    width: 320px;
+    height: 980px;
+    padding-top: 61px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -1px;
+    background-color: $bkg-aux;
+}
+
+.about-label {
+    margin: 0;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.94px;
+    color: $color-white;
+    text-align: center;
+}
+
+.about-header {
+    margin-top: 12px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37.71px;
+    color: $color-white;
+    text-align: center;
+}
+
+.about-cow {
+    width: 313px;
+    height: 313px;
+    margin-top: 19px;
+    margin-bottom: 27px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-intro {
+    width: 225px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21.12px;
+    color: $color-white;
+    text-align: center;
+}
+
+.choose {
+    margin-top: 0px;
+    line-height: 19.44px;
+}
+
+.about-button {
+    position: relative;
+    display: flex;
+    margin-top: 24px;
+}
+
+.button-element {
+    width: 164px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    border-radius: 10px;
+    background-color: $color-accent;
+
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    padding-left: 34px;
+}
+
+.about-button .button-arrow {
+    position: absolute;
+    display: block;
+    top: 16px;
+    left: 195px;
+}
+
 // Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {}
+@media screen and (min-width: $mobile320) {
+    
+}
 
 // Для экранов от 480 до 767 пикселей
-@media screen and (min-width: $mobile480) {}
+@media screen and (min-width: $mobile480) {
+    .about-wrapper {
+        width: 480px;
+    }
+
+    .about-button .button-arrow {
+        left: 275px;
+    }
+}
 
 // Для экранов от 768 до 1199 пикселей
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .about-wrapper {
+        width: 768px;
+        height: 600px;
+    }
+
+    .about-header {
+        width: 481px;
+    }
+
+    .about-info {
+        display: flex;
+    }
+
+    .about-cow {
+        width: 370px;
+        height: 370px;
+        margin-top: 65px;
+        margin-left: 12px;
+        margin-bottom: 0;
+    }
+    
+    .about-intro {
+        width: 330px;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 18px;
+    
+        &:first-child {
+            margin-top: 80px;
+        }
+    }
+
+    .about-button {
+        margin-top: 32px;
+    }
+
+    .button-element {
+        margin-left: 12px;
+    }
+
+    .about-button .button-arrow {
+        left: 129px;
+    }
+}
 
 // Для экранов от 1200 и более пикселей
-@media screen and (min-width: $desktop) {}
+@media screen and (min-width: $desktop) {
+    .about-wrapper {
+        width: 1200px;
+        height: 800px;
+    }
+
+    .about-label {
+        font-weight: 800;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36.57px;
+    }
+
+    .about-header {
+        width: 481px;
+
+        font-size: 36px;
+        line-height: 45.25px;
+        letter-spacing: 6%;
+    }
+
+    .about-cow {
+        width: 536px;
+        height: 551px;
+        margin-top: 71px;
+        margin-left: -6px;
+        margin-bottom: 0;
+    }
+
+    .about-intro {
+        width: 475px;
+        margin-top: 10px;
+        margin-left: 90px;
+
+        font-size: 16px;
+        line-height: 28.16px;
+    
+        &:first-child {
+            margin-top: 172px;
+        }
+    }
+
+    .choose {
+        width: 463px;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 27.16px;
+    }
+    
+        .about-button {
+            margin-top: 54px;
+        }
+    
+        .button-element {
+            margin-left: 90px;
+        }
+    
+        .about-button .button-arrow {
+            left: 207px;
+        }
+}
