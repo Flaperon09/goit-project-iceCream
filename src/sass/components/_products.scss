@@ -1,5 +1,4 @@
-.products
- {
+.products {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -10,26 +9,36 @@
     width: 320px;
     height: 1937px;
 
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
 
     background-color: $bkg-color;
-    background-image: url('../images/products/backgroud-mobile.jpg');
-    background-size: cover;
+    background-size: 885px;
+    background-position-x: -310px;
+    background-position-y: -140px;
+    background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
 }
 
-// Стили карточки товара - начало
+// Стили карточек товара - начало
 .grid-container {
     padding: 0;
+    margin-top: 40px;
+
+    display: grid;
+    gap: 60px;
+    grid-template-rows: 522px 522px 522px;
 }
 
 .grid-element {
     width: 280px;
     height: 420px;
-    margin-top: 148px;
+    margin-top: 102px;
     border-radius: 24px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
     font-size: 0;
 }
 
@@ -40,7 +49,7 @@
     height: 240px;
     
     margin-left: 19px;
-    margin-top: -120px;
+    margin-top: -106px;
 }
 
 .icecream {
@@ -52,7 +61,7 @@
 }
 
 .icecoffee {
-    margin-top: 168px;
+    margin-top: 102px;
     background-color: $color-cart-icecoffee;
 }
 
@@ -61,7 +70,7 @@
 }
 
 .milkshakes {
-    margin-top: 168px;
+    margin-top: 102px;
     background-color: $color-cart-milkshakes;
 }
 
@@ -70,6 +79,7 @@
 }
 
 .cart-title {
+    margin: -8px;
     margin-bottom: 0;
 
     font-family: $font-main;
@@ -97,7 +107,21 @@
     text-align: center;
 }
 
+.products-button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
 .icecream .cart-arrow {
+    display: block;
+    width: 40px;
+    height: 16px;
     margin-top: 101px;
     margin-left: auto;
     margin-right: auto;
@@ -105,6 +129,9 @@
 
 .icecoffee .cart-arrow,
 .milkshakes .cart-arrow {
+    display: block;
+    width: 40px;
+    height: 16px;
     margin-top: 53px;
     margin-left: auto;
     margin-right: auto;
@@ -116,7 +143,7 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .products-wrapper {
-        background-image: url('../images/products/backgroud-mobile@2x.jpg');
+        background-image: url('../images/gallery/gallery-bcg-mobile@2x.jpg');
     }
 
     .icecream::before {
@@ -135,26 +162,30 @@
     }
 }
 
-// === Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {
-    .products-wrapper {
-        width: 320px;
-        height: 1937px;
-        margin-left: auto;
-        margin-right: auto;
+.prod-label {
+    height: 22px;
+    margin-top: 60px;
+    margin-bottom: 0;
 
-        background-image: url('../images/products/backgroud-mobile.jpg');
-        background-size: cover;
-    }
+    font-family: $font-main;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21.94px;
+    text-align: center;
+    color: $color;
+}
 
-    // Медиазапрос для бекграунда на экране до 479 пикселей
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .products-wrapper {
-            background-image: url('../images/products/backgroud-mobile@2x.jpg');
-        }
-    }
+.prod-header {
+    height: 38px;
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37.71px;
+    text-align: center;
+    color: $color;
 }
 
 .prod-label {
@@ -170,7 +201,7 @@
 
 .prod-header {
     margin-top: 12px;
-    
+
     font-family: $font-header;
     font-weight: 400;
     font-size: 30px;
@@ -179,14 +210,16 @@
     color: $color;
 }
 
+// === Для экранов от 320 до 479 пикселей
+@media screen and (min-width: $mobile320) {}
+
 // === Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
     .products-wrapper {
         width: 480px;
         height: 1957px;
-    
-        background-image: url('../images/products/backgroud-mobile.jpg');
-        background-size: cover;
+
+        background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
     }
     
     // Медиазапрос для бекграунда на экране от 480 до 767 пикселей
@@ -194,11 +227,17 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .products-wrapper {
-            background-image: url('../images/products/backgroud-mobile@2x.jpg');
+            background-image: url('../images/gallery/gallery-bcg-mobile@2x.jpg');
         }
     }
 
     // Стили карточки товара - начало
+    .grid-container {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-rows: 530px 530px 530px;
+    }
     .grid-element {
         width: 320px;
         height: 428px;
@@ -220,10 +259,11 @@
         width: 768px;
         height: 830px;
         padding: 0 32px 0 32px;
-    
-        // background-repeat: repeat;
-        background-image: url('../images/products/backgroud-tablet.jpg');
-        background-size: cover;
+
+        background-size: 940px;
+        background-position-x: -10px;
+        background-position-y: -120px;
+        background-image: url('../images/gallery/gallery-bcg-tablet.jpg');
         
     }
     
@@ -232,7 +272,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .products-wrapper {
-            background-image: url('../images/products/backgroud-tablet@2x.jpg');
+            background-image: url('../images/gallery/gallery-bcg-tablet@2x.jpg');
         }
     }
 
@@ -249,14 +289,17 @@
     // Стили Grid-сетки
     .grid-container {
         display: grid;
+        width: 704px;
+        margin-top: 80px;
         gap: 16px;
         grid-template-columns: 224px 224px 224px;
+        grid-template-rows: 530px
     }
 
     .grid-element {
         width: 224px;
         height: 428px;
-        margin-top: 200px;
+        // margin-top: 200px;
     }
 
     .grid-element::before {
@@ -276,11 +319,15 @@
     }
     
     .icecream .cart-arrow {
-        margin-top: 101px;
+        margin-top: 90px;
+    }
+
+    .icecoffee .cart-arrow {
+        margin-top: 40px;
     }
 
     .milkshakes .cart-arrow {
-        margin-top:75px;
+        margin-top: 64px;
     }
 }
 
@@ -291,9 +338,11 @@
         height: 1053px;
 
         padding: 0 16px 0 16px;
-    
-        background-image: url('../images/products/backgroud-desktop.jpg');
-        background-size: cover;
+
+        background-size: 1297px;
+        background-position-x: -48px;
+        background-position-y: -250px;
+        background-image: url('../images/gallery/gallery-bcg-desktop.jpg');
     }
 
     .prod-label {
@@ -312,14 +361,17 @@
     // Стили grid
     .grid-container {
         display: grid;
+        width: 1168px;
+        margin-top: 120px;
         gap: 29px;
         grid-template-columns: 370px 370px 370px;
+        grid-template-rows: 716px
     }
     
     .grid-element {
         width: 370px;
         height: 536px;
-        margin-top: 303px;
+        margin-top: 180px;
     }
     
     .grid-element::before {
@@ -381,7 +433,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .products-wrapper {
-            background-image: url('../images/products/backgroud-desktop@2x.jpg');
+            background-image: url('../images/gallery/gallery-bcg-desktop@2x.jpg');
         }
     
         .icecream::before {

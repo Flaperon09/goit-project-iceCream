@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="landing" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ice Cream</title>
+    <link
+      rel="shortcut icon"
+      href="./images/header/favicon.png"
+      type="image/png"
+    />
     <!-- Наборы шрифтов Гугл -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +23,7 @@
   </head>
   <body>
     <!-- Заголовок -->
-    <header class="header">
+    <header>
       <include src="./partials/header.html"></include>
     </header>
 
@@ -35,5 +41,22 @@
     <footer class="footer">
       <include src="./partials/footer.html"></include>
     </footer>
+
+    <!-- Модальные окна -->
+    <include src="./partials/modals/modal_buy.html"></include>
+    <include src="./partials/modals/modal_franchise.html"></include>
+    <include src="./partials/modals/modal_ingredients.html"></include>
+    <include src="./partials/modals/modal_location.html"></include>
+    <include src="./partials/modals/modal_more.html"></include>
+
+    <!-- Скрипты -->
+    <script src="../js/modal.js"></script>
+    <script src="../js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

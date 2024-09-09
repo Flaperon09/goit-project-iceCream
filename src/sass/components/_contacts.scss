@@ -1,11 +1,482 @@
+.contacts-wrapper {
+    position: relative;
+    width: 320px;
+    height: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $bkg-aux;
+}
+
+.contacts-header {
+    position: fixed;
+    transform: scale(0);
+}
+
+.cont-grid-container {
+    position: absolute;
+    display: grid;
+    gap: 16px;
+    grid-template-rows: 412px 412px 412px;
+    margin-top: -349px;
+    left: 20px;
+}
+
+.cont-grid-element {
+    width: 280px;
+    height: 412px;
+    padding-top: 40px;
+    padding-left: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 24px;
+    background-color: $color-white;
+}
+
+// Стили элементов карточки
+.cont-label {
+    display: inline-block;
+    height: 22px;
+    padding: 4px 22px;
+    margin: 0;
+    border-radius: 4px;
+    background-color: $color-accent;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.4px;
+}
+
+.address {
+    font-style: normal;
+}
+
+.cont-town {
+    height: 22px;
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22.32px;
+}
+
+.cont-adress {
+    width: 215px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21.96px;
+    color: $color-cart-milkshakes;
+}
+
+.line {
+    margin-top: 24px;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 216px;
+    size: 1px;
+    color: $color-line;
+}
+
+.monday {
+    height: 22px;
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22.32px;
+}
+
+.time {
+    height: 22px;
+    margin: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22.32px;
+    color: $color-time;
+}
+
+.saturday {
+    height: 22px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22.32px;
+}
+
+.cont-phone {
+    display: block;
+    width: 130px;
+    height: 19px;
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19.2px;
+    color: $color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cont-email {
+    display: block;
+    width: 130px;
+    height: 19px;
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19.2px;
+    color: $color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Стили кнопок
+.contacts-buttons {
+    padding-top: 935px;
+}
+
+.button {
+    display: block;
+    width: 196px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+
+    // Нижний маржин для первой кнопки
+    &:first-child {
+        margin-bottom: 16px;
+        padding-left: 40px;
+        background-color: $color-accent;
+        border: none;
+    }
+
+    // Левый паддинг для второй кнопки
+    padding-left: 55px;
+
+    // Бекграунд для второй кнопки
+    background-color: $bkg-aux;
+
+    // Ховер для первой кнопки
+    &:first-child:hover {
+        background-color: $hover;
+        border: none;
+    }
+    // Фокус для первойкнопки
+    &:first-child:focus {
+        background-color: $hover;
+        color: $bkg-color;
+        border: none;
+    }
+
+    border: solid 2px $color-accent;
+    // Ховер для второй кнопки
+    &:hover {
+        border: solid 2px $hover;
+    }
+    // Фокус для второй кнопки
+    &:focus {
+        border: solid 2px $hover;
+        color: $bkg-color;
+    }
+
+
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.button .button-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    fill: currentColor;
+}
+
 // Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
-@media screen and (min-width: $mobile480) {}
+@media screen and (min-width: $mobile480) {
+    .contacts-wrapper {
+        width: 480px;
+
+    }
+
+    .cont-grid-container {
+        left: 100px;
+    }
+
+    .arrow-location {
+        left: 287px;
+    }
+    
+    .arrow-franchise {
+        left: 272px;
+    }
+}
 
 // Для экранов от 768 до 1199 пикселей
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .contacts-wrapper {
+        width: 768px;
+        height: 366px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .cont-grid-container {
+        position: absolute;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 224px 224px 224px;
+        grid-template-rows: 537px;
+        margin-top: -299px;
+        left: 32px;
+    }
+
+    .cont-grid-element {
+        width: 224px;
+        height: 537px;
+        padding-top: 40px;
+        padding-left: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // Стили элементов карточки
+    .cont-label {
+        height: 30px;
+        padding: 4px 13px;
+    
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .cont-town {
+        height: 26px;
+        margin-top: 32px;
+
+        font-size: 14px;
+        line-height: 26.04px;
+    }
+    
+    .cont-adress {
+        width: 173px;
+        height: 71px;
+        margin-top: 12px;
+
+        font-size: 14px;
+        line-height: 25.62px;
+    }
+    
+    .line {
+        margin-top: 32px;
+        width: 176px;
+    }
+    
+    .monday {
+        height: 26px;
+        margin-top: 32px;
+    
+        font-size: 14px;
+        line-height: 26.04px;
+    }
+    
+    .time {
+        height: 26px;
+    
+        font-size: 14px;
+        line-height: 26.04px;
+    }
+     
+    .saturday {
+        height: 26px;
+   
+        font-size: 14px;
+        line-height: 26.04px;
+    }
+    
+    .cont-phone {
+        width: 151px; 
+        height: 21px;
+        margin-top: 32px;
+  
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+    .cont-email {
+        width: 151px;
+        height: 21px;
+        margin-top: 4px;
+   
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+    // Стили кнопок
+    .contacts-buttons {
+        display: flex;
+        padding-top: 278px;
+    }
+    
+    .button {
+        width: 196px;
+        height: 42px;
+        border-radius: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    
+        // Маржин для первой кнопки
+        &:first-child {
+            margin: 0px 16px 0px 148px;
+        }    
+    }
+    
+    .arrow-location {
+        top: 293px;
+        left: 293px;       
+    }
+    
+    .arrow-franchise {
+        top: 293px;
+        left: 490px;
+    }
+}
 
 // Для экранов от 1200 и более пикселей
-@media screen and (min-width: $desktop) {}
+@media screen and (min-width: $desktop) {
+    .contacts-wrapper {
+        width: 1200px;
+        height: 644px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .cont-grid-container {
+        gap: 32px;
+        grid-template-columns: 368px 368px 368px;
+        grid-template-rows: 542px;
+        margin-top: -128px;
+        left: 16px;
+    }
+    
+    .cont-grid-element {
+        width: 368px;
+        height: 542px;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+    
+    // Стили элементов карточки
+    .cont-label {
+        padding: 4px 14px;
+    }
+    
+    .cont-town {
+        height: 30px;
+    
+        font-size: 16px;
+        line-height: 29.76px;
+    }
+    
+    .cont-adress {
+        width: 280px;
+        height: 50px;
+        margin-top: 8px;
+    
+        font-size: 16px;
+        line-height: 29.28px;
+    }
+    
+    .line {
+        width: 288px;
+    }
+    
+    .monday {
+        height: 30px;
+    
+        font-size: 16px;
+        line-height: 29.76px;
+    }
+    
+    .time {
+        height: 30px;
+    
+        font-size: 16px;
+        line-height: 29.76px;
+    }
+    
+    .saturday {
+        height: 30px;
+        margin-top: 12px;
+    
+       font-size: 16px;
+        line-height: 29.76px;
+    }
+    
+    .cont-phone {
+        width: 173px;
+        height: 24px;
+    
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .cont-email {
+        width: 183px;
+       height: 24px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+        // Стили кнопок
+        .contacts-buttons {
+            padding-top: 474px;
+        }
+    
+    .button {    
+        // Маржин для первой кнопки
+        &:first-child {
+            margin: 0px 16px 0px 396px;
+        }
+    }
+    
+    .arrow-location {
+        top: 489px;
+        left: 541px;
+    }
+    
+    .arrow-franchise {
+        top: 489px;
+        left: 738px;
+    }  
+}

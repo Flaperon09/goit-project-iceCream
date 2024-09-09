@@ -1,0 +1,62 @@
+<!-- Серый фон -->
+<div class="buy__backdrop is-hidden" data-modal>
+  <!-- Модальное окно -->
+  <div div class="modal-buy" id="modal-buy">
+    <h2 class="buy__header">Buy now</h2>
+    <div class="buy__grid-container">
+      <div class="buy__grid-element buy__icecream">
+        <h3 class="buy__element__title">ICE CREAM</h3>
+      </div>
+      <div class="buy__grid-element buy__icecoffee">
+        <h3 class="buy__element__title">ICE COFFEE</h3>
+      </div>
+      <div class="buy__grid-element buy__milkshake">
+        <h3 class="buy__element__title">MILKSHAKE</h3>
+      </div>
+    </div>
+    <!-- Форма заказа -->
+    <form class="buy__form" name="buy__form" autocomplete="on" novalidate>
+      <label class="buy__name" for="username">Name</label>
+      <input
+        class="buy__input"
+        type="text"
+        name="username"
+        id="username"
+        autofocus
+      />
+
+      <label class="buy__phone" for="userphone">Phone</label>
+      <input
+        class="buy__input phone"
+        type="tel"
+        name="userphone"
+        id="userphone"
+      />
+
+      <label class="buy__comment" for="comments">Comment</label>
+      <textarea
+        class="buy__input textarea"
+        name="comments"
+        rows="3"
+        id="comments"
+      ></textarea>
+
+      <button class="buy__submit" type="submit">Submit</button>
+    </form>
+    <!-- Кнопка закрытия модального окна -->
+    <button
+      type="button"
+      aria-expanded="false"
+      aria-controls="modal-buy"
+      class="button-modal"
+      data-modal-close
+    >
+      <svg class="icon-modal" aria-label="Закрытие модального окна">
+        <use
+          class="icon-close"
+          href="./images/footer/symbol-defs.svg#icon-close"
+        ></use>
+      </svg>
+    </button>
+  </div>
+</div>

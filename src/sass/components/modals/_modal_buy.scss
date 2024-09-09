@@ -1,0 +1,344 @@
+@import '../../utils/placeholders';
+// Стили оверлея (единые для всех вьюпортов)
+.buy__backdrop {
+    @extend %backdrop;
+}
+
+// Стили закрытого модального окна
+.buy__backdrop.is-hidden .modal-buy {
+    // В закрытом состоянии у модалки размер 10%
+    @extend %closed_modal;
+}
+
+// Стили модального окна
+.modal-buy {
+    // @extend %modal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 90%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 10px;
+    border: solid 2px $color-accent;
+    
+    background-color: $color-white;
+    opacity: 1;
+    
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    overflow-y: scroll;
+}
+
+// Стили хедера
+.buy__header {
+    margin-top: 28px;
+
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $color;
+}
+
+// Скрытие стандартной кнопки закрытия модального окна
+.button-modal {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+// Стили иконки закрытия модального окна
+.icon-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    
+    fill: $color;
+    cursor: pointer;
+}
+
+// Стили сетки
+.buy__grid-container {
+    width: 132px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 199px 199px 199px;
+    grid-template-columns: 132px;
+}
+
+.buy__grid-element {
+    width: 132px;
+    height: 136px;
+    margin-top: 63px;
+        
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    font-size: 0;
+}
+
+.buy__grid-element::before {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+
+    margin-left: -15px;
+    margin-top: -68px;
+}
+
+.buy__icecream {
+    border: solid 2px $color-modal-icecream;
+    background-color: $color-white;
+}
+
+.buy__icecream::before {
+    background-image: url(../images/products/ice-cream-mobil320.png);
+}
+
+.buy__icecoffee {
+    border: solid 2px $color-cart-icecoffee;
+    background-color: $color-cart-icecoffee;
+}
+
+.buy__icecoffee::before {
+    background-image: url(../images/products/ice-coffee.png);
+}
+
+.buy__milkshake {
+    border: solid 2px $color-cart-milkshakes;
+    background-color: $color-white;
+}
+
+.buy__milkshake::before {
+    background-image: url(../images/products/milkshakes.png);
+}
+
+.buy__element__title {
+    margin-top: 15px;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-align: center;
+}
+
+// === Стили формы заказа
+.buy__form {
+    position: relative;
+    width: 224px;
+    height: 221px;
+    padding: 0;
+    margin: 32px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// - Стили лейблов
+.buy__name {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+}
+
+.buy__phone {
+    position: absolute;
+    top: 48px;
+    left: 12px;
+}
+
+.buy__comment {
+    position: absolute;
+    top: 90px;
+    left: 12px;
+}
+
+// - Стили input
+.buy__input {
+    width: 224px;
+    height: 32px;
+    padding-left: 65px;
+
+    border-radius: 10px;
+    border: solid 1px $bkg-aux;
+
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.8px;
+    background-color: $color-accent-rgba;
+}
+
+.buy__input.phone {
+    margin-top: 12px;
+}
+
+.buy__input.textarea {
+    height: 65px;
+    margin-top: 12px;
+    padding: 5px;
+    text-indent: 90px;
+}
+
+// - Стили кнопки отправки формы
+.buy__submit {
+    display: block;
+    width: 114px;
+    height: 42px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.63px;
+    text-align: center;
+
+    border: none;
+    border-radius: 10px;
+    background-color: $color-accent;
+    cursor: pointer;
+}
+
+// Медиазапрос для псевдоэлементов
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .buy__icecream::before {
+        background-size: 157px;
+        background-image: url(../images/products/ice-cream-mobil320@2x.png);
+    }
+
+    .buy__icecoffee::before {
+        background-size: 157px;
+        background-image: url(../images/products/ice-coffee@2x.png);
+    }
+
+    .buy__milkshake::before {
+        background-size: 157px;
+        background-image: url(../images/products/milkshakes@2x.png);
+    }
+}
+
+// === Для экранов от 480 до 767 пикселей
+@media screen and (min-width: $mobile480) {
+    .modal-buy {
+            width: 400px;;
+        }
+}
+
+// === Для экранов от 768 до 1200 пикселей
+@media screen and (min-width: $tablet) {
+    .modal-buy {
+        width: 568px;
+    }
+
+    // Стили хедера
+    .buy__header {
+        margin-top: 32px;
+
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    // Стили иконки закрытия модального окна
+    .icon-modal {
+        width: 24px;
+        height: 24px;
+    }
+
+    // Стили сетки
+    .buy__grid-container {
+        width: 460px;
+        margin-top: 40px;
+    
+        gap: 32px;
+        grid-template-rows: 199px;
+        grid-template-columns: 132px 132px 132px;
+    }
+    
+    // === Стили формы заказа
+    .buy__form {
+        width: 368px;
+        height: 274px;
+        margin: 40px 0 0 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // - Стили лейблов
+    .buy__name {
+        top: 7px;
+        left: 16px;
+    }
+    
+    .buy__phone {
+        top: 67px;
+        left: 16px;
+    }
+    
+    .buy__comment {
+        top: 120px;
+        left: 16px;
+    }
+    
+    // - Стили input
+    .buy__input {
+        width: 368px;
+        height: 42px;
+        padding-left: 70px;
+
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+    
+    .buy__input.phone {
+        margin-top: 16px;
+    }
+    
+    .buy__input.textarea {
+        height: 84px;
+        margin-top: 16px;
+        padding: 5px;
+        text-indent: 95px;
+    }
+    
+    // - Стили кнопки отправки формы
+    .buy__submit {
+        width: 121px;
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 14px;
+        line-height: 17.07px;
+    }
+}
+
+// === Для экранов от 1200 и более
+@media screen and (min-width: $desktop) {
+    .modal-buy {
+        width: 800px;
+    }
+}

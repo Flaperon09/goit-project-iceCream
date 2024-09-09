@@ -1,4 +1,3 @@
-
 .about-wrapper {
     width: 320px;
     height: 980px;
@@ -64,7 +63,6 @@
 }
 
 .about-button {
-    position: relative;
     display: flex;
     margin-top: 24px;
 }
@@ -85,19 +83,29 @@
     line-height: 18px;
     text-align: left;
     padding-left: 34px;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover;
+    }
+    
+    &:focus {
+        background-color: $hover;
+        color: $color-white;
+    }
 }
 
 .about-button .button-arrow {
-    position: absolute;
-    display: block;
-    top: 16px;
-    left: 195px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    fill: currentColor;
 }
 
 // Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {
-    
-}
+@media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {

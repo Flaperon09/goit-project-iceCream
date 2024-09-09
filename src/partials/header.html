@@ -1,185 +1,181 @@
-<div class="container">
-  <nav class="nav-menu">
+<div class="header">
+  <div class="container">
+    <nav class="nav-menu">
+      <picture>
+        <source
+          srcset="
+            ./images/header/logo-mobile320.png    1x,
+            ./images/header/logo-mobile320@2x.png 2x
+          "
+          media="(max-width: 479px)"
+        />
+        <source
+          srcset="
+            ./images/header/logo-mobile480.png    1x,
+            ./images/header/logo-mobile480@2x.png 2x
+          "
+          media="(max-width: 1199px)"
+        />
+        <source
+          srcset="
+            ./images/header/logo-desktop.png    1x,
+            ./images/header/logo-desktop@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <img src="./images/header/logo-mobile320.png" alt="logo" />
+      </picture>
+      <ul class="nav-list">
+        <li class="nav-element">
+          <a class="nav-item" href="">Home</a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-item" href="#how_it's_made">How it's made? </a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-item" href="#products">Our products</a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-item" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="tablet-menu">
+        <!-- Кнопка мобильного меню и само меню -->
+        <include src="./partials/mobile_menu.html"></include>
+        <!-- Кнопка меню Buy для планшета и десктопа -->
+        <button class="tablet-buy" data-modal-open-tablet type="button">
+          Buy now
+          <svg class="button-arrow">
+            <use href="./images/footer/symbol-defs.svg#icon-menu-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <h1 class="header-title">
+      ICE CREAM MADE WITH <span class="title-accent">PASSION</span>
+    </h1>
+
+    <div class="buttons">
+      <a class="button-products" href="#products">Products</a>
+      <a class="button-made" href="#how_it's_made">How it's made</a>
+    </div>
+
+    <div class="header-statistic">
+      <p class="stat-number">16</p>
+      <p class="stat-type">cafes</p>
+      <p class="stat-number">23</p>
+      <p class="stat-type">food trucks</p>
+    </div>
+
+    <!-- Картинка тарелки с мороженками -->
     <picture>
       <source
         srcset="
-          ./images/header/logo-mobile320.png    1x,
-          ./images/header/logo-mobile320@2x.png 2x
-        "
-        media="(max-width: 479px)"
-      />
-      <source
-        srcset="
-          ./images/header/logo-mobile480.png    1x,
-          ./images/header/logo-mobile480@2x.png 2x
+          ./images/header/plate-tablet.png    1x,
+          ./images/header/plate-tablet@2x.png 2x
         "
         media="(max-width: 1199px)"
       />
       <source
         srcset="
-          ./images/header/logo-desktop.png    1x,
-          ./images/header/logo-desktop@2x.png 2x
+          ./images/header/plate-desktop.png    1x,
+          ./images/header/plate-desktop@2x.png 2x
         "
         media="(min-width: 1200px)"
       />
-      <img src="./images/header/logo-mobile320.png" alt="logo" />
+      <img
+        class="many-icecreams"
+        src="./images/header/plate-tablet.png"
+        alt="Много мороженок"
+      />
     </picture>
-    <ul class="nav-list">
-      <li class="nav-element">
-        <a class="nav-item" href="">Home</a>
-      </li>
-      <li class="nav-element">
-        <a class="nav-item" href="#how_it's_made">How it's made? </a>
-      </li>
-      <li class="nav-element">
-        <a class="nav-item" href="#products">Our products</a>
-      </li>
-      <li class="nav-element">
-        <a class="nav-item" href="">Contact</a>
-      </li>
-    </ul>
-    <div class="tablet-menu">
-      <img
-        class="menu-icon"
-        src="./images/header/menu_icon.svg"
-        width="32"
-        height="32"
-        alt="menu-icon"
+
+    <p class="text-header">
+      Indulge in a scoop of ice cream made with passion and treat your taste
+      buds to an unforgettable experience!
+    </p>
+
+    <!-- Картинка с желтыми точками -->
+    <picture>
+      <source
+        srcset="
+          ./images/header/yellow-dots-mobil320.png    1x,
+          ./images/header/yellow-dots-mobil320@2x.png 2x
+        "
+        media="(max-width: 479px)"
       />
-      <button type="button" class="menu-button">Buy now</button>
-      <img
-        class="button-arrow"
-        src="./images/header/menu-arrow-right.svg"
-        width="12"
-        height="12"
-        alt="Стрелка кнопки Buy"
+      <source
+        srcset="
+          ./images/header/yellow-dots-mobil480.png    1x,
+          ./images/header/yellow-dots-mobil480@2x.png 2x
+        "
+        media="(max-width: 767px)"
       />
-    </div>
-  </nav>
-  <h1 class="header-title">
-    ICE CREAM MADE WITH <span class="title-accent">PASSION</span>
-  </h1>
+      <source
+        srcset="
+          ./images/header/yellow-dots-tablet.png    1x,
+          ./images/header/yellow-dots-tablet@2x.png 2x
+        "
+        media="(max-width: 1199px)"
+      />
+      <source
+        srcset="
+          ./images/header/yellow-dots-desktop.png    1x,
+          ./images/header/yellow-dots-desktop@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <img
+        class="yellow-dots"
+        src="./images/header/yellow-dots-mobil320.png"
+        alt="желтые точки"
+      />
+    </picture>
 
-  <div class="buttons">
-    <a class="button-products" href="#products">Products</a>
-    <a class="button-made" href="#how_it's_made">How it's made</a>
+    <!-- Картинка стрелка вправо -->
+    <img
+      class="arrow"
+      src="./images/header/arrow-right.svg"
+      width="40"
+      height="16"
+      alt="стрелка вправо"
+    />
+
+    <!-- Картинка 3 мороженки -->
+    <picture>
+      <source
+        srcset="
+          ./images/header/icecream_mobile320.png    1x,
+          ./images/header/icecream_mobile320@2x.png 2x
+        "
+        media="(max-width: 479px)"
+      />
+      <source
+        srcset="
+          ./images/header/icecream_mobile480.png    1x,
+          ./images/header/icecream_mobile480@2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="
+          ./images/header/icecream_tablet.png    1x,
+          ./images/header/icecream_tablet@2x.png 2x
+        "
+        media="(max-width: 1199px)"
+      />
+      <source
+        srcset="
+          ./images/header/icecream_desktop.png    1x,
+          ./images/header/icecream_desktop@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <img
+        class="big-icecream"
+        src="./images/header/icecream_mobile320.png"
+        alt="большое мороженое"
+      />
+    </picture>
   </div>
-
-  <div class="header-statistic">
-    <p class="stat-number">16</p>
-    <p class="stat-type">cafes</p>
-    <p class="stat-number">23</p>
-    <p class="stat-type">food trucks</p>
-  </div>
-
-  <!-- Картинка тарелки с мороженками -->
-  <picture>
-    <source
-      srcset="
-        ./images/header/plate-tablet.png    1x,
-        ./images/header/plate-tablet@2x.png 2x
-      "
-      media="(max-width: 1199px)"
-    />
-    <source
-      srcset="
-        ./images/header/plate-desktop.png    1x,
-        ./images/header/plate-desktop@2x.png 2x
-      "
-      media="(min-width: 1200px)"
-    />
-    <img
-      class="many-icecreams"
-      src="./images/header/plate-tablet.png"
-      alt="Много мороженок"
-    />
-  </picture>
-
-  <p class="text-header">
-    Indulge in a scoop of ice cream made with passion and treat your taste buds
-    to an unforgettable experience!
-  </p>
-
-  <!-- Картинка с желтыми точками -->
-  <picture>
-    <source
-      srcset="
-        ./images/header/yellow-dots-mobil320.png    1x,
-        ./images/header/yellow-dots-mobil320@2x.png 2x
-      "
-      media="(max-width: 479px)"
-    />
-    <source
-      srcset="
-        ./images/header/yellow-dots-mobil480.png    1x,
-        ./images/header/yellow-dots-mobil480@2x.png 2x
-      "
-      media="(max-width: 767px)"
-    />
-    <source
-      srcset="
-        ./images/header/yellow-dots-tablet.png    1x,
-        ./images/header/yellow-dots-tablet@2x.png 2x
-      "
-      media="(max-width: 1199px)"
-    />
-    <source
-      srcset="
-        ./images/header/yellow-dots-desktop.png    1x,
-        ./images/header/yellow-dots-desktop@2x.png 2x
-      "
-      media="(min-width: 1200px)"
-    />
-    <img
-      class="yellow-dots"
-      src="./images/header/yellow-dots-mobil320.png"
-      alt="желтые точки"
-    />
-  </picture>
-
-  <!-- Картинка стрелка вправо -->
-  <img
-    class="arrow"
-    src="./images/header/arrow-right.svg"
-    width="40"
-    height="16"
-    alt="стрелка вправо"
-  />
-
-  <!-- Картинка 3 мороженки -->
-  <picture>
-    <source
-      srcset="
-        ./images/header/icecream_mobile320.png    1x,
-        ./images/header/icecream_mobile320@2x.png 2x
-      "
-      media="(max-width: 479px)"
-    />
-    <source
-      srcset="
-        ./images/header/icecream_mobile480.png    1x,
-        ./images/header/icecream_mobile480@2x.png 2x
-      "
-      media="(max-width: 767px)"
-    />
-    <source
-      srcset="
-        ./images/header/icecream_tablet.png    1x,
-        ./images/header/icecream_tablet@2x.png 2x
-      "
-      media="(max-width: 1199px)"
-    />
-    <source
-      srcset="
-        ./images/header/icecream_desktop.png    1x,
-        ./images/header/icecream_desktop@2x.png 2x
-      "
-      media="(min-width: 1200px)"
-    />
-    <img
-      class="big-icecream"
-      src="./images/header/icecream_mobile320.png"
-      alt="большое мороженое"
-    />
-  </picture>
 </div>

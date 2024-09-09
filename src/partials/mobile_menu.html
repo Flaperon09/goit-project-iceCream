@@ -1,0 +1,43 @@
+<!-- Кнопка мобильного меню -->
+<button
+  type="button"
+  aria-expanded="false"
+  aria-controls="menu-container"
+  class="button-menu"
+  data-menu-button
+>
+  <svg class="icon-menu" aria-label="Переключатель мобильного меню">
+    <use
+      class="icon-open"
+      href="./images/footer/symbol-defs.svg#icon-menu"
+    ></use>
+    <use
+      class="icon-close"
+      href="./images/footer/symbol-defs.svg#icon-close"
+    ></use>
+  </svg>
+</button>
+<!-- Мобильное меню -->
+<div class="menu-container" data-menu id="menu-container">
+  <ul class="menu-list">
+    <li class="menu-element">
+      <a class="menu-item" href="">Home</a>
+    </li>
+    <li class="menu-element">
+      <a class="menu-item" href="#how_it's_made">How it's made? </a>
+    </li>
+    <li class="menu-element">
+      <a class="menu-item" href="#products">Our products</a>
+    </li>
+    <li class="menu-element">
+      <a class="menu-item" href="#contact">Contact</a>
+    </li>
+  </ul>
+  <!-- Кнопка меню Buy для мобильной версии -->
+  <button class="mobile-buy" data-modal-open type="button">
+    Buy now
+    <svg class="button-arrow">
+      <use href="./images/footer/symbol-defs.svg#icon-menu-arrow"></use>
+    </svg>
+  </button>
+</div>

@@ -3,7 +3,7 @@
     overflow: hidden; // Скрытие выступающей части слайдера
 
     width: 320px;
-    height: 959px;
+    height: 923px;
     margin-left: auto;
     margin-right: auto;
 
@@ -13,7 +13,7 @@
     background-position-x: 100px;
     background-position-y: -1068px;
     background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
-    // background-size: cover;
+
 }
 
 // Медиазапрос для бекграунда на экране до 320 пикселей
@@ -201,7 +201,7 @@
 @media screen and (min-width: $tablet) {
     .reviews-wrapper {
         width: 768px;
-        height: 878px;
+        height: 734px;
     
         background-size: 940px;
         background-position-x: -10px;
@@ -209,7 +209,7 @@
         background-image: url('../images/gallery/gallery-bcg-tablet.jpg');
     }
     
-    // Медиазапрос для бекграунда на экране до 320 пикселей
+    // Медиазапрос для бекграунда на экране от 768 до 1199 пикселей
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -280,7 +280,7 @@
 @media screen and (min-width: $desktop) {
     .reviews-wrapper {
         width: 1200px;
-        height: 729px; 
+        height: 636px; 
 
         background-position-x: -48px;
         background-position-y: -622px;

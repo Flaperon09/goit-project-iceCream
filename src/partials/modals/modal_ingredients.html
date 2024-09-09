@@ -1,0 +1,143 @@
+<!-- Серый фон -->
+<div class="ingr__backdrop is-hidden" data-modal-ingr>
+  <!-- Модальное окно -->
+  <div div class="modal-ingr" id="modal-ingr">
+    <h2 class="ingr__header">Chololate icecream</h2>
+    <img
+      class="ingr-icecream"
+      srcset="
+        ././images/modals/icecream-ingradients.png    1x,
+        ././images/modals/icecream-ingradients@2x.png 2x
+      "
+      src="././images/modals/icecream-ingradients.png"
+      alt="Мороженка"
+    />
+    <div class="ingr__grid-container">
+      <div class="ingr__grid-element">
+        <img
+          class="ingr-rond"
+          srcset="
+            ././images/modals/rond.png    1x,
+            ././images/modals/rond@2x.png 2x
+          "
+          src="././images/modals/rond.png"
+          alt="Зелёный круг"
+        />
+        <p class="rond-number">320</p>
+        <p class="rond-text">kcal</p>
+      </div>
+      <div class="ingr__grid-element">
+        <img
+          class="ingr-rond"
+          srcset="
+            ././images/modals/rond.png    1x,
+            ././images/modals/rond@2x.png 2x
+          "
+          src="././images/modals/rond.png"
+          alt="Зелёный круг"
+        />
+        <p class="rond-number">4g</p>
+        <p class="rond-text">Prote...</p>
+      </div>
+      <div class="ingr__grid-element">
+        <img
+          class="ingr-rond"
+          srcset="
+            ././images/modals/rond.png    1x,
+            ././images/modals/rond@2x.png 2x
+          "
+          src="././images/modals/rond.png"
+          alt="Зелёный круг"
+        />
+        <p class="rond-number">8,2g</p>
+        <p class="rond-text">Fats</p>
+      </div>
+      <div class="ingr__grid-element">
+        <img
+          class="ingr-rond"
+          srcset="
+            ././images/modals/rond.png    1x,
+            ././images/modals/rond@2x.png 2x
+          "
+          src="././images/modals/rond.png"
+          alt="Зелёный круг"
+        />
+        <p class="rond-number">40.4g</p>
+        <p class="rond-text">Carbs</p>
+      </div>
+    </div>
+    <!-- Заголовок таблицы -->
+    <h3 class="table-title">Ingredients</h3>
+    <!-- Таблица ингредиентов -->
+    <table class="ingr-table">
+      <tr>
+        <td>Milk</td>
+        <td>100ml</td>
+      </tr>
+      <tr>
+        <td>Belgian chocolate</td>
+        <td>20g</td>
+      </tr>
+      <tr>
+        <td>Cream</td>
+        <td>150ml</td>
+      </tr>
+      <tr>
+        <td>Cocoa powder</td>
+        <td>30g</td>
+      </tr>
+      <tr>
+        <td>Sugar</td>
+        <td>40g</td>
+      </tr>
+      <tr>
+        <td>Vanilla sugar</td>
+        <td>10g</td>
+      </tr>
+    </table>
+    <!-- Форма заказа -->
+    <form class="ingr__form" name="ingr__form" autocomplete="on" novalidate>
+      <label class="ingr__name" for="username">Name</label>
+      <input
+        class="ingr__input"
+        type="text"
+        name="username"
+        id="username"
+        autofocus
+      />
+
+      <label class="ingr__phone" for="userphone">Phone</label>
+      <input
+        class="ingr__input phone"
+        type="tel"
+        name="userphone"
+        id="userphone"
+      />
+
+      <label class="ingr__comment" for="comments">Comment</label>
+      <textarea
+        class="ingr__input textarea"
+        name="comments"
+        rows="3"
+        id="comments"
+      ></textarea>
+
+      <button class="ingr__submit" type="submit">Submit</button>
+    </form>
+    <!-- Кнопка закрытия модального окна -->
+    <button
+      type="button"
+      aria-expanded="false"
+      aria-controls="modal-ingr"
+      class="button-modal-ingr"
+      data-modal-close-ingr
+    >
+      <svg class="icon-modal-ingr" aria-label="Закрытие модального окна">
+        <use
+          class="icon-close"
+          href="./images/footer/symbol-defs.svg#icon-close"
+        ></use>
+      </svg>
+    </button>
+  </div>
+</div>

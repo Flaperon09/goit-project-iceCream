@@ -1,3 +1,4 @@
+
 /*
 Присоединяется к стилям через @extend
 
@@ -14,4 +15,58 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
+}
+
+// =======================================================
+@import './variables';
+
+// === МОДАЛЬНОЕ ОКНО
+// Стили оверлея (единые для всех вьюпортов)
+%backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.50);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-hidden {
+        opacity: 0; // Полная прозрачность модального окна с классом .is-hidden
+        pointer-events: none; // Пропускает клики сквозь скрытое модальное окно
+    }
+}
+
+// Стили закрытого модального окна
+%closed_modal {
+    // В закрытом состоянии у модалки размер 10%
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+// Стили модального окна
+%modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 90%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 10px;
+    border: solid 2px $color-accent;
+
+    background-color: $color-white;
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow-y: scroll;
 }

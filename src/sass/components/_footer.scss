@@ -1,11 +1,269 @@
+.footer-wrapper {
+    width: 320px;
+    height: 390px;
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $bkg-aux;
+}
+
+.footer-homemade {
+    width: 240px;
+    height: 42px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 22px;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.94px;
+    color: $color-white;
+}
+
+.footer-passion {
+    width: 200px;
+    height: 76px;                                                                  
+    margin-top: 16px;
+    margin-bottom: 0;
+    margin-left: 22px;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41.45px;
+    color: $color-white;
+}
+
+.icon-list {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    margin-top: 60px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.icon-item {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    &:nth-child(n+2) {
+        margin-left: 20px;
+    }
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+}
+
+.icon-link {
+    fill: $bkg-aux;
+    &:hover,
+    &:focus {
+        fill: $color-white;
+    }
+}
+
+.footer-phone {
+    height: 22px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22.32px;
+    color: $color;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+.numbers {
+    color: $color-white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    width: 320px;
+    height: 82px;
+    margin-top: 40px;
+    border-top: solid 1px $color-line;
+    text-align: center;
+}
+
+.text-copyright {
+    width: 200px;
+    height: 42px;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21.28px;
+    color: $color-text-footer;
+}
+
 // Для экранов от 320 до 479 пикселей
 @media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
-@media screen and (min-width: $mobile480) {}
+@media screen and (min-width: $mobile480) {
+    .footer-wrapper {
+        width: 480px;
+        height: 396px;
+    }
+
+    .footer-copyright {
+        width: 480px;
+        height: 86px;
+    }
+}
 
 // Для экранов от 768 до 1199 пикселей
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .footer-wrapper {
+        width: 768px;
+        height: 265px;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-header {
+        width: 352px;
+        height: 183px;
+        margin-left: 33px;
+    }
+
+    .footer-homemade {
+        width: 352px;
+        height: 57px;
+        margin: 0;
+        font-size: 26px;
+        line-height: 31.69px;
+    }
+
+    .footer-passion {
+        width: 352px;
+        height: 118px;
+        margin: 8px 0px 0px 0px;
+    
+        font-size: 48px;
+        line-height: 58.51px;
+    }
+
+    .footer-contacts {
+        margin-top: 60px;
+        margin-right: 32px;
+    }
+
+    .icon-list {
+        margin: 0;
+    }
+
+    .footer-phone {
+        height: 26px;
+        margin: 34px 0px 0px 0px;
+  
+        font-size: 14px;
+        line-height: 26.04px;
+    }
+
+    .footer-copyright {
+        width: 768px;
+        height: 50px;
+        margin-top: 32px;
+    }
+
+    .text-copyright {
+        width: 340px;
+        height: 26px;
+        margin: 0;
+        margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        line-height: 26.04px;
+        color: $color-text-footer;
+    }
+}
 
 // Для экранов от 1200 и более пикселей
-@media screen and (min-width: $desktop) {}
+@media screen and (min-width: $desktop) {
+    .footer-wrapper {
+        width: 1200px;
+        height: 226px;
+    }
+    
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-header {
+        width: 504px;
+        height: 122px;
+        margin-left: 16px;
+    }
+    
+    .footer-homemade {
+        width: 504px;
+        height: 37px;
+
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36.57px;
+    }
+    
+    .footer-passion {
+        width: 497px;
+        height: 71px;
+        margin: 14px 0px 0px 0px;
+    
+        font-size: 58px;
+        line-height: 70.7px;
+    }
+    
+    .footer-contacts {
+        margin-top: 18px;
+        margin-right: 16px;
+    }
+    
+    .footer-phone {
+        height: 30px;
+        margin: 40px 0px 0px 0px;
+    
+        font-size: 16px;
+        line-height: 29.76px;
+    }
+    
+        .footer-copyright {
+            width: 1168px;
+            height: 44px;
+            margin-top: 60px;
+            margin-left: auto;
+                margin-right: auto;
+        }
+    
+        .text-copyright {
+            width: 340px;
+            height: 20px;
+            margin: 0;
+            margin-top: 12px;
+            margin-left: auto;
+            margin-right: auto;
+    
+            font-size: 12px;
+            line-height: 22.32px;
+        }
+}

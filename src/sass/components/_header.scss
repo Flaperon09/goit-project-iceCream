@@ -1,14 +1,16 @@
 .header {
     display: flex;
-    justify-content: center;
 }
 
 .container {
     position: relative;
+    width: 320px;
     background-color: $bkg-aux;
     padding-left: 20px;
     padding-right: 20px;
     height: 502px;
+
+    overflow: hidden; // Для мобильного меню
 }
 
 .nav-menu {
@@ -19,10 +21,17 @@
     width: 280px;
     height: 37px;
     margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.tablet-menu {
+    width: 32px;
+    height: 32px;
 }
 
 .header-title {
-    margin-top: 50px;
+    margin-top: 99px;
     margin-bottom: 32px;
 
     font-family: $font-header;
@@ -118,7 +127,7 @@
 }
 
 .nav-list,
-.menu-button,
+.tablet-buy,
 .button-arrow,
 .header-statistic,
 .many-icecreams, 
@@ -129,11 +138,7 @@
 
 
 // Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {
-    .container {
-        width: 320px;
-    }
-}
+@media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
@@ -178,7 +183,7 @@
         margin-top: 20px;
     }
 
-    .menu-button {
+    .tablet-buy {
         display: inline-block;
         width: 152px;
         height: 42px;
@@ -196,30 +201,30 @@
         line-height: 17.07px;
         text-align: left;
 
+        cursor: pointer;
+
         &:hover {
             background-color: $hover;
         }
 
-        &:focus
-        .button-arrow {
-            color: $arrow;
-        }
-
-        & .button-arrow {
-            fill: $arrow;
+        &:focus {
+            background-color: $hover;
+            color: $color-white;
         }
     }
 
     .tablet-menu {
         display: flex;
-        position: relative;
+        width: 216px;
+        height: 42px;
     }
 
     .button-arrow {
-        display: flex;
-        position: absolute;
-        right: 35px;
-        top: 15px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 4px;
+        fill: currentColor;
     }
 
     .header-title {
@@ -314,8 +319,12 @@
         margin-top: 8px;
     }
 
-    .menu-icon {
-        display: none;
+    .tablet-menu {
+        width: 152px;
+    }
+
+    .tablet-buy {
+        margin: 0;
     }
 
     .nav-list {
@@ -337,6 +346,13 @@
         &:hover {
             color: $color-accent;
         }
+    }
+
+    .buttons {
+        position: absolute;
+        top: 290px;
+        left: 16px;
+        z-index: 2;
     }
 
     .big-icecream {
