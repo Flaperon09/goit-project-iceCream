@@ -1,4 +1,11 @@
 
+.reviews-header {
+    margin: 0;
+    padding: 0;
+    transform: scale(0);
+    font-size: 0;
+}
+
 .reviews-wrapper {
     overflow: hidden; // Скрытие выступающей части слайдера
 
@@ -16,7 +23,7 @@
 
 }
 
-// Медиазапрос для бекграунда на экране до 320 пикселей
+// Медиазапрос для бекграунда на экране до 480 пикселей
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
@@ -138,9 +145,6 @@
 }
 // === Стили содержимого слайдов - КОНЕЦ
 
-// Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {}
-
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
     .reviews-wrapper {
@@ -153,7 +157,7 @@
         background-image: url('../images/gallery/gallery-bcg-mobile.jpg');
     }
     
-    // Медиазапрос для бекграунда на экране до 320 пикселей
+    // Медиазапрос для бекграунда на экране от 480 до 767 пикселей
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -287,7 +291,7 @@
         background-image: url('../images/gallery/gallery-bcg-desktop.jpg');
     }
     
-    // Медиазапрос для бекграунда на экране до 320 пикселей
+    // Медиазапрос для бекграунда на экране от 1200 и более пикселей
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {

@@ -1,20 +1,3 @@
-// === Код скрипта для одного модального окна ===
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector("[data-modal-open]"),
-//     closeModalBtn: document.querySelector("[data-modal-close]"),
-//     modal: document.querySelector("[data-modal]"),
-//   };
-
-//   refs.openModalBtn.addEventListener("click", toggleModal);
-//   refs.closeModalBtn.addEventListener("click", toggleModal);
-
-//   function toggleModal() {
-//     document.body.classList.toggle("modal-open");
-//     refs.modal.classList.toggle("is-hidden");
-//   }
-// })();
-
 (() => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-open]"),
@@ -33,6 +16,14 @@
     closeModalBtnMore: document.querySelector("[data-modal-close-more]"),
     modalMore: document.querySelector("[data-modal-more]"),
 
+    openModalBtnLocation: document.querySelector("[data-modal-open-location]"),
+    closeModalBtnLocation: document.querySelector("[data-modal-close-location]"),
+    modalLocation: document.querySelector("[data-modal-location]"),
+
+    openModalBtnFranchise: document.querySelector("[data-modal-open-franchise]"),
+    closeModalBtnFranchise: document.querySelector("[data-modal-close-franchise]"),
+    modalFranchise: document.querySelector("[data-modal-franchise]"),
+
   };
 
   refs.openModalBtn.addEventListener("click", toggleModal);
@@ -48,6 +39,12 @@
   refs.openModalBtnMore.addEventListener("click", toggleModalMore);
   refs.closeModalBtnMore.addEventListener("click", toggleModalMore);
 
+  refs.openModalBtnLocation.addEventListener("click", toggleModalLocation);
+  refs.closeModalBtnLocation.addEventListener("click", toggleModalLocation);
+
+  refs.openModalBtnFranchise.addEventListener("click", toggleModalFranchise);
+  refs.closeModalBtnFranchise.addEventListener("click", toggleModalFranchise);
+
   function toggleModal() {
     document.body.classList.toggle("modal-open");
     refs.modal.classList.toggle("is-hidden");
@@ -61,5 +58,15 @@
   function toggleModalMore() {
     document.body.classList.toggle("modal-open");
     refs.modalMore.classList.toggle("is-hidden");
+  }
+
+  function toggleModalLocation() {
+    document.body.classList.toggle("modal-open");
+    refs.modalLocation.classList.toggle("is-hidden");
+  }
+
+  function toggleModalFranchise() {
+    document.body.classList.toggle("modal-open");
+    refs.modalFranchise.classList.toggle("is-hidden");
   }
 })();

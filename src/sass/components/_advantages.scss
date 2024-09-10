@@ -11,7 +11,6 @@
     transform: scale(0);
 }
 
-// Grid-контейнер
 .adv-grid-container {
     padding-top: 47px;
     margin-left: auto;
@@ -91,10 +90,6 @@
         background-image: url(../images/advantages/icon-torch@2x.png);
     }
 }
-
-
-// Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {

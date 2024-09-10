@@ -203,7 +203,6 @@
         color: $bkg-color;
     }
 
-
     font-family: $font-main;
     font-weight: 600;
     font-size: 14px;
@@ -218,9 +217,6 @@
     margin-left: 4px;
     fill: currentColor;
 }
-
-// Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {}
 
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {

@@ -33,13 +33,21 @@
     text-align: center;
 }
 
+.about-info {
+    position: relative;
+}
+
 .about-cow {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 313px;
     height: 313px;
-    margin-top: 19px;
-    margin-bottom: 27px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.about-text {
+    padding-top: 359px;
 }
 
 .about-intro {
@@ -104,9 +112,6 @@
     fill: currentColor;
 }
 
-// Для экранов от 320 до 479 пикселей
-@media screen and (min-width: $mobile320) {}
-
 // Для экранов от 480 до 767 пикселей
 @media screen and (min-width: $mobile480) {
     .about-wrapper {
@@ -131,14 +136,19 @@
 
     .about-info {
         display: flex;
+        padding-left: 382px;
     }
 
     .about-cow {
         width: 370px;
         height: 370px;
-        margin-top: 65px;
-        margin-left: 12px;
-        margin-bottom: 0;
+        left: 12px;
+        top: 58px;
+        transform: none;
+    }
+
+    .about-text {
+        padding-top: 0;
     }
     
     .about-intro {
@@ -187,12 +197,16 @@
         letter-spacing: 6%;
     }
 
+    .about-info {
+        padding-left: 526px;
+    }
+
     .about-cow {
         width: 536px;
         height: 551px;
-        margin-top: 71px;
-        margin-left: -6px;
-        margin-bottom: 0;
+        top: 0;
+        left: 0;
+        margin: 60px 0 0 -6px;
     }
 
     .about-intro {

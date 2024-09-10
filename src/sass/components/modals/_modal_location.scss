@@ -1,0 +1,124 @@
+// Стили оверлея (единые для всех вьюпортов)
+.location__backdrop {
+    @extend %backdrop;
+}
+
+// Стили закрытого модального окна
+.location__backdrop.is-hidden .modal-location {
+    // В закрытом состоянии у модалки размер 10%
+    @extend %closed_modal;
+}
+
+// Стили модального окна
+.modal-location {
+    @extend %modal;
+    height: 365px;
+    overflow-y: none;
+}
+
+// Скрытие стандартной кнопки закрытия модального окна
+.button-modal-location {
+    @extend %modal-button-close;
+}
+
+// Стили иконки закрытия модального окна
+.icon-modal-location {
+    @extend %modal-icon-close;
+}
+
+// Стили хедера
+.location__header {
+    width: 180px;
+    height: 24px;
+    margin: 18px auto 0 auto;
+
+    font-family: $font-header;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $color;
+}
+
+// Стили оболочки карты
+.map-wrapper {
+    width: 224px;
+    height: 199px;
+    border-radius: 10px;
+    margin: 20px auto 0 auto;
+}
+
+// Стили кнопки Открыть карту
+.button-map {
+    display: block;
+        width: 134px;
+        height: 42px;
+        margin: 24px auto 0 auto;
+    
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14,63px;
+        text-align: center;
+    
+        border: none;
+        border-radius: 10px;
+        background-color: $color-accent;
+        cursor: pointer;
+}
+
+// === Для экранов от 480 до 767 пикселей
+@media screen and (min-width: $mobile480) {
+    .modal-location {
+        width: 400px;
+    }
+}
+
+// === Для экранов от 768 до 1200 пикселей
+@media screen and (min-width: $tablet) {
+    .modal-location {
+        width: 568px;
+        height: 470px;
+    }
+
+    // Стили иконки закрытия модального окна
+    .icon-modal-location {
+        width: 24px;
+        height: 24px;
+    }
+
+    // Стили хедера
+    .location__header {
+        width: 322px;
+        height: 28px;
+        margin: 32px auto 0 auto;
+
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        color: $color;
+    }
+
+    // Стили оболочки карты
+    .map-wrapper {
+        width: 448px;
+        height: 260px;
+        margin: 32px auto 0 auto;
+    }
+    
+    // Стили кнопки Открыть карту
+    .button-map {
+        width: 145px;
+        margin: 32px auto 0 auto;
+    
+        font-size: 14px;
+        line-height: 17.07px;
+    }
+}
+
+// === Для экранов от 1200 и более
+@media screen and (min-width: $desktop) {
+    .modal-location {
+        width: 800px;
+    }
+}

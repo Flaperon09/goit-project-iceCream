@@ -1,7 +1,7 @@
 <!-- Серый фон -->
 <div class="ingr__backdrop is-hidden" data-modal-ingr>
   <!-- Модальное окно -->
-  <div div class="modal-ingr" id="modal-ingr">
+  <div class="modal-ingr" id="modal-ingr">
     <h2 class="ingr__header">Chololate icecream</h2>
     <img
       class="ingr-icecream"
@@ -12,7 +12,9 @@
       src="././images/modals/icecream-ingradients.png"
       alt="Мороженка"
     />
+    <!-- Контейнер сетки -->
     <div class="ingr__grid-container">
+      <!-- Карточка 1 -->
       <div class="ingr__grid-element">
         <img
           class="ingr-rond"
@@ -26,6 +28,7 @@
         <p class="rond-number">320</p>
         <p class="rond-text">kcal</p>
       </div>
+      <!-- Карточка 2 -->
       <div class="ingr__grid-element">
         <img
           class="ingr-rond"
@@ -39,6 +42,7 @@
         <p class="rond-number">4g</p>
         <p class="rond-text">Prote...</p>
       </div>
+      <!-- Карточка 3 -->
       <div class="ingr__grid-element">
         <img
           class="ingr-rond"
@@ -52,6 +56,7 @@
         <p class="rond-number">8,2g</p>
         <p class="rond-text">Fats</p>
       </div>
+      <!-- Карточка 4 -->
       <div class="ingr__grid-element">
         <img
           class="ingr-rond"
@@ -97,29 +102,23 @@
     </table>
     <!-- Форма заказа -->
     <form class="ingr__form" name="ingr__form" autocomplete="on" novalidate>
-      <label class="ingr__name" for="username">Name</label>
-      <input
-        class="ingr__input"
-        type="text"
-        name="username"
-        id="username"
-        autofocus
-      />
+      <label class="ingr__name" for="user_name">Name</label>
+      <input class="ingr__input" type="text" name="user_name" id="user_name" />
 
-      <label class="ingr__phone" for="userphone">Phone</label>
+      <label class="ingr__phone" for="user_phone">Phone</label>
       <input
         class="ingr__input phone"
         type="tel"
-        name="userphone"
-        id="userphone"
+        name="user_phone"
+        id="user_phone"
       />
 
-      <label class="ingr__comment" for="comments">Comment</label>
+      <label class="ingr__comment" for="comment_">Comment</label>
       <textarea
         class="ingr__input textarea"
         name="comments"
         rows="3"
-        id="comments"
+        id="comment_"
       ></textarea>
 
       <button class="ingr__submit" type="submit">Submit</button>
